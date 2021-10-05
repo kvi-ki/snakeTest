@@ -71,7 +71,8 @@ body {
 .winner-text {
   background-color: transparent;
   color: rgb(163, 233, 190);
-  font-size: 8.5rem;
+  font-size: 7rem;
+  padding-top: 3rem;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
