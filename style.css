@@ -1,0 +1,155 @@
+* {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: start;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.snake {
+  width: 3.75rem;
+  height: 3.3rem;
+  z-index: 999;
+  background-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+.table {
+  margin-top: 8.3rem;
+  margin-left: 8.3rem;
+  float: center;
+  border-collapse: collapse;
+}
+
+.cell {
+  width: 5rem;
+  height: 5rem;
+  border: 0.08rem solid black;
+  vertical-align: top;
+  padding-left: 0.3rem;
+}
+
+.number {
+  width: 10rem;
+  height: 10rem;
+  background-color: rgb(240, 245, 178);
+  font-size: 3rem;
+  color: black;
+  padding: 3rem 0rem;
+  text-align: center;
+  border-radius: 1rem;
+  border: 0.08rem solid white;
+  margin-top: 10rem;
+}
+
+.winner {
+  width: 55%;
+  height: 25rem;
+  background-color: rgb(240, 78, 78);
+  font-size: 10rem;
+  border-radius: 3rem;
+  border: 0.08rem solid white;
+  z-index: 10;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+}
+
+.winner-text {
+  background-color: transparent;
+  color: rgb(163, 233, 190);
+  font-size: 8.5rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.close {
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  color: rgb(144, 216, 238);
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.yellow {
+  background-color: rgb(243, 243, 148);
+}
+
+.yellow2 {
+  background-color: rgb(235, 235, 125);
+}
+
+.red {
+  background-color: rgb(238, 121, 121);
+}
+
+.purple {
+  background-color: rgb(166, 133, 194);
+}
+
+.sky {
+  background-color: rgb(173, 215, 228);
+}
+
+.blue {
+  background-color: rgb(129, 157, 207);
+}
+
+.green {
+  background-color: rgb(142, 202, 174);
+}
+
+.pink {
+  background-color: rgb(231, 160, 222);
+}
+
+.orange {
+  background-color: rgb(216, 167, 76);
+}
+
+.brown {
+  background-color: rgba(243, 179, 136, 0.808);
+}
+
+.button {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: rgb(8, 241, 191);
+  font-size: 25px;
+  text-align: center;
+}
+
+.move1 {
+}
+
+.move2 {
+}
+
+.move3 {
+}
+
+.move4 {
+}
+
+.move5 {
+}
+
+.move6 {
+}
