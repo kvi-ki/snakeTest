@@ -22,8 +22,6 @@ button.addEventListener('click', play);
 // find snake id
 function findId() {
     let id;
-    let array = allCells;
-    // array = allCells;
     for (let i = 0; i < allCells.length; i++) {
         if (allCells[i].contains(snake)) {
             id = Number(allCells[i].id);
@@ -42,7 +40,7 @@ function moveSnake(x) {
 }
 
 function win(x) {
-    if (x == 100) {
+    if (x === 100) {
         winner.classList.remove('hidden');
     }
 }
