@@ -4,16 +4,20 @@ const button = document.querySelector('.button');
 const snake = document.querySelector('.snake');
 const allCells = document.querySelectorAll('.cell');
 const oneCell = document.querySelector('.cell');
-const currentNumber = document.querySelector('.number');
+// const currentNumber = document.querySelector('.number');
 const br = document.createElement('br');
 const winner = document.querySelector('.winner');
 const closeBtn = document.querySelector('.close');
+let dice = document.querySelector('.dice-image');
 let number = 0;
 
 function play() {
     let id = findId();
     number = Math.trunc(Math.random() * 6) + 1;
-    currentNumber.textContent = number;
+    dice.classList.remove('hidden');
+    dice.src = `./assets/dice-${number}.png`;
+    dice.classList.toggle('rotate');
+    // currentNumber.textContent = number;
     moveSnake(id);     
 }
 
@@ -47,7 +51,8 @@ function win(x) {
 
 function closeWinner() {
     winner.classList.add('hidden');
-    currentNumber.textContent = '';
+    dice.classList.add('hidden');
+    // currentNumber.textContent = '';
     document.getElementById('1').appendChild(snake);
 }
 
