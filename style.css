@@ -46,6 +46,36 @@
 .right {
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+}
+
+.player {
+  margin: 0 2rem;
+  width: 11rem;
+  height: 15rem;
+  border: 0.2rem solid rgb(236, 245, 153);
+  border-radius: 5%;
+  background-color: rgb(119, 163, 150);
+  text-align: center;
+  font-size: 24px;
+  color: rgb(252, 236, 236);
+  padding-top: 5rem;
+}
+
+.player-active {
+  background-color: rgb(154, 192, 180);
+}
+
+.dice-part {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: row;
 }
 
 .button {
@@ -77,6 +107,7 @@
   float: center;
   opacity: 0.8;
   transform: rotate(25deg);
+  box-shadow: 0.3rem 0.3rem 0.4rem 0.4rem rgb(114, 101, 119);
 }
 
 .rotate {
@@ -160,7 +191,8 @@
 }
 
 .overlay {
-  filter: blur(0.06rem);
+  filter: saturate(20%);
+  /* filter: blur(0.06rem); */
 }
 
 .yellow {
