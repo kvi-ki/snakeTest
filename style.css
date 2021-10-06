@@ -64,7 +64,6 @@ body {
   float: center;
   opacity: 0.8;
   transform: rotate(25deg);
-  background-color: rgb(240, 245, 178);
 }
 
 .rotate {

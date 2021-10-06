@@ -1,30 +1,25 @@
 'use strict';
 
-const button = document.querySelector('.button');
+const btnRoll = document.querySelector('.button');
 const snake = document.querySelector('.snake');
 const allCells = document.querySelectorAll('.cell');
 const oneCell = document.querySelector('.cell');
-// const currentNumber = document.querySelector('.number');
 const br = document.createElement('br');
-const winner = document.querySelector('.winner');
+const winnerPopUp = document.querySelector('.winner');
 const closeBtn = document.querySelector('.close');
 let dice = document.querySelector('.dice-image');
 let number = 0;
 
-function play() {
-    let id = findId();
+btnRoll.addEventListener('click', function() {
+    let id = findSnakeId();
     number = Math.trunc(Math.random() * 6) + 1;
     dice.classList.remove('hidden');
     dice.src = `./assets/dice-${number}.png`;
     dice.classList.toggle('rotate');
-    // currentNumber.textContent = number;
     moveSnake(id);     
-}
+});
 
-button.addEventListener('click', play);
-
-// find snake id
-function findId() {
+function findSnakeId() {
     let id;
     for (let i = 0; i < allCells.length; i++) {
         if (allCells[i].contains(snake)) {
@@ -40,20 +35,19 @@ function moveSnake(x) {
     let reqCell = document.getElementById(newId);
     reqCell.appendChild(br);
     reqCell.appendChild(snake);
-    win(newId);
+    checkWinner(newId);
 }
 
-function win(x) {
-    if (x === 100) {
-        winner.classList.remove('hidden');
+function checkWinner(id) {
+    if (id === 100) {
+        winnerPopUp.classList.remove('hidden');
     }
 }
 
-function closeWinner() {
-    winner.classList.add('hidden');
+function closeWinnerPopUp() {
+    winnerPopUp.classList.add('hidden');
     dice.classList.add('hidden');
-    // currentNumber.textContent = '';
     document.getElementById('1').appendChild(snake);
 }
 
-closeBtn.addEventListener('click', closeWinner);
+closeBtn.addEventListener('click', closeWinnerPopUp);
