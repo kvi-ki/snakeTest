@@ -41,6 +41,7 @@ function moveSnake(x) {
 function checkWinner(id) {
     if (id === 100) {
         winnerPopUp.classList.remove('hidden');
+        document.querySelector('.main').classList.add('overlay');
     }
 }
 
@@ -48,6 +49,7 @@ function closeWinnerPopUp() {
     winnerPopUp.classList.add('hidden');
     dice.classList.add('hidden');
     document.getElementById('1').appendChild(snake);
+    document.querySelector('.main').classList.remove('overlay');
 }
 
 closeBtn.addEventListener('click', closeWinnerPopUp);
