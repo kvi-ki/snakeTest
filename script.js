@@ -60,6 +60,7 @@ function closeWinnerPopUp() {
     dice.classList.add('hidden');
     document.getElementById('1').appendChild(snake);
     document.querySelector('.main').classList.remove('overlay');
+    player1.classList.add('player-active');
 }
 
 closeBtn.addEventListener('click', closeWinnerPopUp);

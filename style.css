@@ -1,23 +1,124 @@
 * {
-  background-color: rgb(228, 222, 233);
+  /* background-color: rgb(228, 222, 233); */
+  background-color: rgb(12, 11, 12);
+  /* background-image: linear-gradient(#D5D7DE, #6C6E8F); */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-align: start;
+  /* text-align: start; */
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 1rem;
 }
 
 .main {
-  display: flex;
+  /* display: flex;
   align-items: center;
+  justify-content: space-evenly; */
+}
+
+.action-section {
+  /* display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  margin-top: 9rem; */
+  height: 12rem;
+  margin: 1rem 2rem;
+  box-shadow: 0.05rem 0.05rem 0.5rem 0.5rem rgb(171, 141, 185);
+  border-radius: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.players {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 2%;
+}
+
+.player {
+  /* margin: 0 2rem;
+  width: 11rem;
+  height: 15rem; */
+  /* padding-top: 5rem; */
+  /* font-size: 24px; */
+  /* border: 0.2rem solid rgb(236, 245, 153); */
+  width: 3.5rem;
+  height: 3.5rem;
+  padding-top: 1.3rem;
+  box-shadow: 0.05rem 0.05rem 0.5rem 0.5rem rgb(236, 245, 153);
+  border-radius: 10%;
+  background-color: rgb(119, 163, 150);
+  font-size: 0.7rem;
+  text-align: center;
+  color: rgb(252, 236, 236);
+}
+
+.player-active {
+  background-color: rgb(154, 192, 180);
+}
+
+.dice-part {
+  /* margin-top: 8rem; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border-radius: 10%;
+}
+
+.button {
+  /* width: 130px;
+  height: 130px; */
+  /* font-size: 22px; */
+  /* margin: 5rem 5rem; */
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  border: 2px solid white;
+  background-color: rgb(146, 226, 209);
+  box-shadow: 0.05rem 0.05rem 0.5rem 0.5rem rgb(104, 177, 171);
+  color: rgb(65, 14, 70);
+  text-align: center;
+}
+
+.button:hover {
+  cursor: pointer;
+  /* width: 133px;
+  height: 133px;
+  font-size: 24px; */
+  width: 3.3rem;
+  height: 3.3rem;
+  font-size: 0.6rem;
+  background-color: rgb(147, 228, 210);
+  box-shadow: 0.05rem 0.05rem 0.5rem 0.5rem rgb(104, 179, 172);
+}
+
+.dice-image {
+  /* c
+  width: 7rem;
+  height: 7rem; */
+  margin-top: 0.3rem;
+  width: 2.8rem;
+  height: 2.8rem;
+  float: center;
+  opacity: 0.8;
+  transform: rotate(25deg);
+  box-shadow: 0.3rem 0.3rem 0.7rem 0.7rem rgb(135, 124, 139);
+}
+
+.rotate {
+  transform: rotate(10deg);
 }
 
 .snake {
-  width: 3.75rem;
-  height: 3.3rem;
+  /* width: 3.75rem;
+  height: 3.3rem; */
+  margin-top: 0.1rem;
+  padding-left: 0.1rem;
+  width: 0.8rem;
+  height: 0.8rem;
   z-index: 999;
   background-color: transparent;
 }
@@ -27,91 +128,25 @@
 }
 
 .table {
-  margin-top: 8.3rem;
-  margin-left: 8.3rem;
+  /* margin-top: 8.3rem;
+  margin-left: 8.3rem; */
+  margin: 3rem 1.5rem;
   float: center;
   border-collapse: collapse;
-  opacity: 0.7;
-  box-shadow: 0.3rem 0.3rem 1rem 1rem rgb(97, 95, 95);
+  opacity: 0.9;
+  box-shadow: 0.3rem 0.3rem 1rem 1rem rgb(238, 241, 239);
+  /* box-shadow: 0.3rem 0.3rem 1rem 1rem rgb(97, 95, 95); */
 }
 
 .cell {
-  width: 5rem;
-  height: 5rem;
+  /* width: 5rem;
+  height: 5rem; */
+  width: 2.3rem;
+  height: 2.3rem;
   border: 0.08rem solid black;
   vertical-align: top;
-  padding-left: 0.3rem;
-}
-
-.right {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-.players {
-  display: flex;
-  flex-direction: row;
-  margin-top: 5rem;
-}
-
-.player {
-  margin: 0 2rem;
-  width: 11rem;
-  height: 15rem;
-  border: 0.2rem solid rgb(236, 245, 153);
-  border-radius: 5%;
-  background-color: rgb(119, 163, 150);
-  text-align: center;
-  font-size: 24px;
-  color: rgb(252, 236, 236);
-  padding-top: 5rem;
-}
-
-.player-active {
-  background-color: rgb(154, 192, 180);
-}
-
-.dice-part {
-  margin-top: 8rem;
-  display: flex;
-  flex-direction: row;
-}
-
-.button {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  border: 2px solid white;
-  background-color: rgb(146, 226, 209);
-  box-shadow: 0.05rem 0.05rem 0.5rem 0.5rem rgb(104, 177, 171);
-  font-size: 22px;
-  color: rgb(65, 14, 70);
-  text-align: center;
-  margin: 5rem 5rem;
-}
-
-.button:hover {
-  cursor: pointer;
-  width: 133px;
-  height: 133px;
-  font-size: 24px;
-  background-color: rgb(147, 228, 210);
-  box-shadow: 0.05rem 0.05rem 0.5rem 0.5rem rgb(104, 179, 172);
-}
-
-.dice-image {
-  margin: 5rem 5rem;
-  width: 7rem;
-  height: 7rem;
-  float: center;
-  opacity: 0.8;
-  transform: rotate(25deg);
-  box-shadow: 0.3rem 0.3rem 0.4rem 0.4rem rgb(114, 101, 119);
-}
-
-.rotate {
-  transform: rotate(10deg);
+  padding-left: 0.2rem;
+  font-size: 0.7rem;
 }
 
 /* .number {
@@ -128,12 +163,15 @@
 } */
 
 .winner {
-  width: 45%;
+  /* width: 45%;
   height: 23rem;
   top: 30%;
-  left: 26%;
+  left: 26%; */
+  width: 55%;
+  height: 20%;
+  top: 25%;
+  left: 25%;
   background-color: rgb(240, 78, 78);
-  font-size: 10rem;
   border-radius: 3rem;
   border: 0.05rem solid white;
   z-index: 10;
@@ -147,21 +185,21 @@
   from {
     width: 0%;
     height: 0%;
-    top: 50%;
+    top: 30%;
     left: 50%;
   }
   to {
-    width: 45%;
-    height: 23rem;
-    top: 30%;
-    left: 26%;
+    width: 55%;
+    height: 20%;
+    top: 25%;
+    left: 25%;
   }
 }
 
 .winner-text {
   background-color: transparent;
   color: rgb(163, 233, 190);
-  font-size: 7rem;
+  font-size: 2rem;
   padding-top: 3rem;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
@@ -175,15 +213,15 @@
     font-size: 0rem;
   }
   to {
-    font-size: 7rem;
+    font-size: 2rem;
   }
 }
 
 .close {
   position: absolute;
-  top: 0.5rem;
-  right: 2rem;
-  font-size: 4rem;
+  top: 0.8rem;
+  right: 1.5rem;
+  font-size: 2rem;
   color: rgb(144, 216, 238);
   border: none;
   cursor: pointer;
@@ -192,7 +230,6 @@
 
 .overlay {
   filter: saturate(20%);
-  /* filter: blur(0.06rem); */
 }
 
 .yellow {
