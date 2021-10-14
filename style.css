@@ -7,6 +7,10 @@
   font-weight: bold;
 }
 
+p {
+  background-color: transparent;
+}
+
 .action-section {
   height: 12rem;
   margin: 1rem 2rem;
@@ -142,21 +146,48 @@
   margin-top: 8%;
 }
 
-.snake {
+.snakeYellow {
   /* width: 3.75rem;
   height: 3.3rem; */
-  margin-top: 0.1rem;
-  margin-left: 0.1rem;
-  width: 0.8rem;
-  height: 0.8rem;
+
+  /* margin-top: 0.1rem;
+  margin-left: 0.1rem;*/
+  position: relative;
+  top: -4%;
+  left: 10%;
+  width: 1rem;
+  height: 1rem;
   z-index: 999;
   background-color: transparent;
 }
 
 @media only screen and (min-width: 600px) {
-  .snake {
-    margin-top: 0.2rem;
-    margin-left: 0.4rem;
+  .snakeYellow {
+    /* margin-top: 0.2rem;
+    margin-left: 0.4rem; */
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+}
+
+.snakeGreen {
+  /* width: 3.75rem;
+  height: 3.3rem; */
+  /* margin-top: 0.1rem;
+  margin-left: 0.1rem; */
+  position: relative;
+  /* top: -%; */
+  left: 7%;
+  width: 0.8rem;
+  height: 0.8rem;
+  z-index: 990;
+  background-color: transparent;
+}
+
+@media only screen and (min-width: 600px) {
+  .snakeGreen {
+    /* margin-top: 0.2rem;
+    margin-left: 0.4rem; */
     width: 2.2rem;
     height: 2.2rem;
   }
@@ -171,7 +202,11 @@
   margin-left: 8.3rem; */
   border-collapse: collapse;
   opacity: 0.9;
-  box-shadow: 0.3rem 0.3rem 1rem 1rem rgb(238, 241, 239);
+}
+@media only screen and (min-width: 600px) {
+  .table {
+    box-shadow: 0.3rem 0.3rem 1rem 1rem rgb(238, 241, 239);
+  }
 }
 
 .cell {
@@ -256,7 +291,7 @@
   background-color: transparent;
   color: rgb(163, 233, 190);
   font-size: 2rem;
-  padding-top: 3rem;
+  padding-top: 2.3rem;
   text-align: center;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
