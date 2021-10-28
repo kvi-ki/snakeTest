@@ -163,8 +163,8 @@ p {
 
 @media only screen and (min-width: 600px) {
   .snakeYellow {
-    /* margin-top: 0.2rem;
-    margin-left: 0.4rem; */
+    top: -8%;
+    left: 15%;
     width: 2.2rem;
     height: 2.2rem;
   }
@@ -173,10 +173,7 @@ p {
 .snakeGreen {
   /* width: 3.75rem;
   height: 3.3rem; */
-  /* margin-top: 0.1rem;
-  margin-left: 0.1rem; */
   position: relative;
-  /* top: -%; */
   left: 7%;
   width: 0.8rem;
   height: 0.8rem;
@@ -186,8 +183,8 @@ p {
 
 @media only screen and (min-width: 600px) {
   .snakeGreen {
-    /* margin-top: 0.2rem;
-    margin-left: 0.4rem; */
+    top: -40%;
+    left: 35%;
     width: 2.2rem;
     height: 2.2rem;
   }
@@ -217,7 +214,7 @@ p {
   border: 0.08rem solid black;
   vertical-align: top;
   padding-left: 0.2rem;
-  font-size: 0.7rem;
+  /* font-size: 0.7rem; */
 }
 
 @media only screen and (min-width: 600px) {

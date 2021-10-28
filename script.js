@@ -11,9 +11,9 @@ const br = document.createElement('br');
 const winnerPopUp = document.querySelector('.winner');
 const closeBtn = document.querySelector('.close');
 let dice = document.querySelector('.dice-image');
+let winnerText = document.querySelector('.winner-text');
 let number = 0;
 let activePlayer = true;
-
 let playing = true;
 
 player1.classList.add('player-active');
@@ -24,9 +24,7 @@ btnRoll.addEventListener('click', function() {
             playTurn(snakeYellow);
         } else if (player2.classList.contains('player-active')) {
             playTurn(snakeGreen);
-        };
-        player1.classList.toggle('player-active');
-        player2.classList.toggle('player-active');
+        };        
     };
 });
 
@@ -36,7 +34,9 @@ function playTurn(snake) {
     dice.classList.remove('hidden');
     dice.src = `./assets/dice-${number}.png`;
     dice.classList.toggle('rotate');
-    moveSnake(id, snake);     
+    moveSnake(id, snake);   
+    player1.classList.toggle('player-active');
+    player2.classList.toggle('player-active');  
 }
 
 function findSnakeId(snake) {
@@ -53,17 +53,19 @@ function findSnakeId(snake) {
 function moveSnake(id, snake) {
     let newId = id + number;   
     let reqCell = document.getElementById(newId);
-    // reqCell.appendChild(br);
     reqCell.appendChild(snake);
-    checkWinner(newId);
+    checkWinner(newId, snake);
 }
 
-function checkWinner(id) {
+function checkWinner(id, snake) {
     if (id === 100) {
         playing = false;
+        player1.classList.remove('player-active');
+        player1.classList.remove('player-active');
         winnerPopUp.classList.remove('hidden');
+        winnerPopUp.appendChild(winnerText);
         document.querySelector('.main').classList.add('overlay');
-    }
+    } 
 }
 
 function closeWinnerPopUp() {
